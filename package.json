@@ -12,10 +12,17 @@
   "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
   "license": "MIT",
   "dependencies": {
+    "css-loader": "^0.28.7",
     "font-awesome": "^4.7.0",
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "vue": "^2.5.13",
+    "vue-loader": "^13.6.2",
+    "vue-template-compiler": "^2.5.13"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "webpack": "^3.10.0"
