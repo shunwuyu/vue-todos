@@ -24,7 +24,7 @@ export default {
 
 <style lang="stylus">
 base_font = 'Open Sans', sans-serif;
-*  
+*
   margin 0
   padding 0
 
