@@ -1,23 +1,38 @@
 {
   "name": "vue-todo",
   "version": "0.1.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "stylus:watch": "stylus -w -m styl/ -o dist/css",
+    "build": "",
+    "dev": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
   "license": "MIT",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "font-awesome": "^4.7.0",
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "vue": "^2.5.13",
+    "vue-loader": "^13.6.2"
   },
   "devDependencies": {
+    "css-loader": "^0.28.7",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shunwuyu/vue-todos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shunwuyu/vue-todos/issues"
+  },
+  "homepage": "https://github.com/shunwuyu/vue-todos#readme",
+  "description": ""
 }
