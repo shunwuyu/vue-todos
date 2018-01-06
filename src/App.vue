@@ -4,20 +4,32 @@
       <todo-header></todo-header>
       <div class="todo-content">
         <todo-report></todo-report>
+        <todo-list :collection="listState.items"></todo-list>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ListStore  from '../data/store.js'
 import Header from './components/Header.vue';
 import TodoReport from './components/TodoReport.vue';
-
+import TodoList from './components/TodoList.vue'
 export default {
   name: 'app',
+  data() {
+    return {
+      listState: ListStore.state
+    }
+  },
+
+  created() {
+    ListStore.load();
+  },
   components: {
     'todo-header': Header,
-    'todo-report': TodoReport
+    'todo-report': TodoReport,
+    'todo-list': TodoList
   }
 }
 </script>

@@ -5,11 +5,27 @@
   </div>
 </template>
 <script>
+  import ListStore  from '../../data/store.js'
   export default {
     data () {
       return {
-        taskDone: 0,
-        taskTotal: 3
+        listState: ListStore.state
+      }
+    },
+    computed: {
+      taskTotal() {
+        return this.listState.items.length;
+      },
+      taskDone() {
+        let total = 0;
+        if (this.listState.items.length > 0) {
+          for (let item of this.listState.items) {
+            if (item.status == "done") {
+              total++;
+            }
+          }
+        }
+        return total;
       }
     }
   }

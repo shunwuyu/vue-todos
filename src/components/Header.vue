@@ -12,14 +12,23 @@
 </div>
 </template>
 <script>
+  const month = ["January", "February", "Mach", "April", "May", "June", "July", "August", "September", "October", "November", "September"],
+    weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   export default {
     data () {
       return {
-        date: '3',
-        weekDay: '星期三',
-        month: '一月',
-        year: '2018'
+        date: '',
+        weekDay: '',
+        month: '',
+        year: ''
       }
+    },
+    created() {
+      const d = new Date();
+      this.date = d.getDate();
+      this.weekDay = weekday[d.getDay()];
+      this.month = month[d.getMonth()];
+      this.year = d.getFullYear();
     },
     methods: {
       add () {
